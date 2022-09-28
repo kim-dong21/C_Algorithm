@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <math.h>
 
 // 이석원은 조규현과 백승환에게 상대편 마린(류재명)의 위치를 계산하라는 명령을 내렸다. 
 // 조규현과 백승환은 각각 자신의 터렛 위치에서 현재 적까지의 거리를 계산했다.
@@ -38,7 +38,7 @@ int main()
     {
         
         scanf("%d %d %d %d %d %d",&x1,&y1,&r1,&x2,&y2,&r2);
-        distance=((square(x1,x2)+square(y1,y2)));
+        distance=(sqrt((square(x1,x2)+square(y1,y2))));
         subtract= r1 > r2 ? r1-r2 : r2-r1;
 
         if(distance>r1+r2) result= 0; // 두 원의 중심 간 거리가 두 반지름을 더한 값 보다 클때
