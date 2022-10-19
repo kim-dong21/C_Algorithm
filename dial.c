@@ -4,10 +4,10 @@
 
 int main()
 {
-    char num[15];
-    int ans,len=0;
+    char num[16]={0};
+    int ans=0,len=0;
 
-    scanf("%s",&num);
+    scanf("%s",num);
 
     while(num[len]) len++;
     
@@ -23,7 +23,6 @@ int main()
         else if(num[i]<84) ans+=8;
         else if(num[i]<87) ans+=9;
         else if(num[i]<91) ans+=10;
-        
 
     } 
 

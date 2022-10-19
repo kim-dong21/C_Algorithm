@@ -3,22 +3,33 @@
 
 
 
+int f(int x){
+    
+    int ans=0;
+    int i=x;
+    while(i){
+        ans=ans*10 + i%10;
+
+        i/=10;
+    }
+
+    return ans;
+
+}
+
+
 int main()
 {
+    int a=0,b=0;
 
-    char str[7];
-    char* a,b,ptr;
-    scanf("%[^\n]s",&str);
+    scanf("%d %d",&a,&b);
 
-    ptr=strtok(str," ");
-    a=ptr;
+    a=f(a);
+    b=f(b);
 
-    ptr=strtok(NULL," ");
-    b=ptr;
-
-    printf("%s",str);
-    
-
+    a>b ? printf("%d",a) : printf("%d",b);
 
     return 0;
+
+
 }
